@@ -1,0 +1,48 @@
+<html>
+<head><title>Extension Options</title></head>
+<script type="text/javascript">
+
+// Saves options to localStorage.
+function save_options() {
+  var quotes = document.getElementById("quotes");
+  var prefix = document.getElementById("prefix");
+  localStorage["quotes"] = quotes.value;
+  localStorage["prefix"] = prefix.value;
+
+  // Update status to let user know options were saved.
+  var status = document.getElementById("status");
+  status.innerHTML = "Options Saved.";
+  setTimeout(function() {
+    status.innerHTML = "";
+  }, 750);
+}
+
+// Restores select box state to saved value from localStorage.
+function restore_options() {
+  var quotes = localStorage["quotes"];
+	var prefix = localStorage["prefix"];
+	if (quotes) {
+		var tarea = document.getElementById("quotes");
+		tarea.value = quotes;
+	}
+	if (prefix) {
+		var text = document.getElementById("prefix");
+		text.value = prefix;	
+	}
+}
+
+</script>
+
+<body onload="restore_options()">
+
+Quotes (one by line):
+<textarea id='quotes' rows='15' cols='50'></textarea>
+
+Prefix to be inserted before a quote (such as ---):
+<input type='text' id='prefix'>
+
+<br>
+<button onclick="save_options()">Save</button>
+<div id='status'></div>
+</body>
+</html>
