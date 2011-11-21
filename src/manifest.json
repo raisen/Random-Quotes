@@ -8,11 +8,11 @@
 		"default_popup": "options.html"
 	},
 	"options_page": "options.html",
-  "icons": {"128": "images/quotes_128.png"},
-  "content_scripts": [
-  	{
-  		"matches": ["https://mail.google.com","http://mail.google.com"],
-  		"js": ["jquery.js", "bsearch.js"]
-  	}
-  ]
+	"icons": {"128": "images/quotes_128.png"},
+	"content_scripts": [
+		{
+			"matches": ["*://mail.google.com/*"],
+			"js": ["jquery.js", "bsearch.js"]
+		}
+	]
 }
