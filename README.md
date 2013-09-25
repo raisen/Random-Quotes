@@ -3,7 +3,7 @@ Random Quotes Chrome Extension
 
 About
 -----
-Chrome extension that inserts a random line into one's Gmail's signature.
+Chrome extension that inserts a random line (a quote, if preferable) into a Gmail email.
 
 Installation
 ------------

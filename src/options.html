@@ -1,48 +1,16 @@
 <html>
-<head><title>Extension Options</title></head>
-<script type="text/javascript">
+  <head><title>Extension Options</title></head>
 
-// Saves options to localStorage.
-function save_options() {
-  var quotes = document.getElementById("quotes");
-  var prefix = document.getElementById("prefix");
-  localStorage["quotes"] = quotes.value;
-  localStorage["prefix"] = prefix.value;
+  <body>
+    Quotes (one by line):<br />
+    <textarea id='quotes' rows='15' cols='50'></textarea><br />
 
-  // Update status to let user know options were saved.
-  var status = document.getElementById("status");
-  status.innerHTML = "Options Saved.";
-  setTimeout(function() {
-    status.innerHTML = "";
-  }, 750);
-}
+    Prefix to be inserted before a quote (such as ---):<br />
+    <input type='text' id='prefix'><br />
 
-// Restores select box state to saved value from localStorage.
-function restore_options() {
-  var quotes = localStorage["quotes"];
-	var prefix = localStorage["prefix"];
-	if (quotes) {
-		var tarea = document.getElementById("quotes");
-		tarea.value = quotes;
-	}
-	if (prefix) {
-		var text = document.getElementById("prefix");
-		text.value = prefix;	
-	}
-}
-
-</script>
-
-<body onload="restore_options()">
-
-Quotes (one by line):<br />
-<textarea id='quotes' rows='15' cols='50'></textarea><br />
-
-Prefix to be inserted before a quote (such as ---):<br />
-<input type='text' id='prefix'><br />
-
-<br>
-<button onclick="save_options()">Save</button>
-<div id='status'></div>
-</body>
+    <br>
+    <button id="save">Save</button>
+    <div id='status'></div>
+  </body>
+  <script src="options.js"></script>
 </html>
