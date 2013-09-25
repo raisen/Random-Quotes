@@ -1,7 +1,7 @@
 {
   "name": "Random Quotes",
   "manifest_version": 2,
-  "version": "1.1",
+  "version": "1.2",
   "description": "Insert random quotes in your GMail emails.",
   "permissions": [
     "storage"
