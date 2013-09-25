@@ -54,7 +54,7 @@ function insert_quote_in_composer_div(composer_div) {
 
 var iv = window.setInterval(function() {
 	if (window.location.href.indexOf('compose') > 0) {
-		console.log('compose window');
+		// console.log('compose window');
 
 		if (!compdiv_found) {
 			var composer_div = find_composer_div();
