@@ -3,9 +3,9 @@ Random Quotes Chrome Extension
 
 About
 -----
-Chrome extension that inserts a random line (a quote, if preferable) into a Gmail email.
+Chrome extension that inserts a random line such as a quote into a Gmail email.
 
-You can download this extension on [Google Chrome Store](https://chrome.google.com/webstore/detail/random-quotes/bhoalcabjhbiahfjlmhfcjkhfcdbfake?authuser=1).
+You can download this extension on [Google Chrome Store](https://chrome.google.com/webstore/detail/random-quotes/bhoalcabjhbiahfjlmhfcjkhfcdbfake).
 
 Installation
 ------------
