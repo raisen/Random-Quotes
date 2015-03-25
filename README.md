@@ -9,4 +9,4 @@ You can download this extension on [Google Chrome Store](https://chrome.google.c
 
 Installation
 ------------
-Follow this [link](http://code.google.com/chrome/extensions/getstarted.html#load) for instructions on how to load an unpacked extension. Point to the src/ in order to load this extension. 
+Follow this [link](https://developer.chrome.com/extensions/getstarted#unpacked) for instructions on how to load an unpacked extension. Point to the src/ in order to load this extension. 
