@@ -1,18 +1,24 @@
+if(window.location.href.indexOf("first-install") != -1) {
+  document.getElementById("first-install").style.display = "block";
+}
+
 // Saves options using chrome.storage
 function save_options() {
   var quotes = document.getElementById("quotes");
   var prefix = document.getElementById("prefix");
   
   chrome.storage.sync.set({
-    "quotes": get_array_from_multiple_lines(quotes.value),
-    "prefix": prefix.value
+    quotes: get_array_from_multiple_lines(quotes.value),
+    prefix: prefix.value
   }, function() {
+    document.getElementById("status").style.display = "block";
     // Update status to let user know options were saved.
-    var status = document.getElementById("status");
-    status.innerHTML = "Options Saved.";
+    var status = document.getElementById("status-text");
+    status.textContent = "Options Saved.";
     setTimeout(function() {
-      status.innerHTML = "";
-    }, 1000);    
+      document.getElementById("status").style.display = "none";
+      status.textContent = "";
+    }, 2000);
   });
 }
 

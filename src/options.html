@@ -1,16 +1,50 @@
 <html>
-  <head><title>Extension Options</title></head>
+  <head>
+    <title>Extension Options</title>
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css">    
+    <link rel="stylesheet" type="text/css" href="options.css">
+  </head>
+
 
   <body>
-    Quotes (one by line):<br />
-    <textarea id='quotes' rows='15' cols='50'></textarea><br />
+    <div class="header">
+      <h1>Gmail Random Quotes</h1>
+    </div>
 
-    Prefix to be inserted before a quote (such as ---):<br />
-    <input type='text' id='prefix'><br />
+    <div class="container" id="first-install">
+      <div class="alert alert-success">
+        <p>Thank you for installing <em>Random Quotes</em>!</p>
+        <p>To start, let's add some quotes to the list below. Feel free to add your own quotes, or <a href="https://www.google.com/#safe=off&q=signature+quotes" target="_blank">Google</a> for some cool ones. Copy and paste those quotes below, one by line.</p>
+        <p>Once you have some quotes, when you compose an email on Gmail, a random quote from the list should be automatically added to the email.</p>
+        <p>If you are experience issues, please <a href="https://chrome.google.com/webstore/detail/random-quotes/bhoalcabjhbiahfjlmhfcjkhfcdbfake/support" target="_blank">contact support.</a></p>
+        <p><strong>IMPORTANT:</strong> There is a small delay of about 3 seconds for the quote to be added to the message. The reason for that is to make sure the entire element has been correctly rendered in the browser. This might change in future versions.</p>
+      </div>
+    </div>
 
-    <br>
-    <button id="save">Save</button>
-    <div id='status'></div>
+    <div class="container">
+      <div id='status'><div class="alert alert-success" id="status-text"></div></div>
+      <div class="panel panel-default">
+        <div class="panel-heading">Settings</div>
+        <div class="panel-body">
+          <div class="row form-group">
+            <div class="col-xs-4 text-right">Quotes (one by line):</div>
+            <div class="col-xs-8">
+              <textarea id='quotes' rows='6' cols='50' class="form-control" ></textarea>
+            </div>
+          </div>
+
+          <div class="row form-group">
+            <div class="col-xs-4 text-right">Prefix to be inserted before a quote<br /><small>(such as ---)</small>:</div>
+            <div class="col-xs-8">
+              <input type='text' id='prefix' class="form-control" >
+            </div>
+          </div>
+
+          <br>
+          <button id="save" class="btn btn-default">Save</button>
+        </div>
+      </div>
+    </div>
   </body>
   <script src="options.js"></script>
 </html>
