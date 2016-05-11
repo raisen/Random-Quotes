@@ -1,0 +1,19 @@
+{
+  "name": "randomquotes",
+  "version": "1.3.0",
+  "description": "Random Quotes Chrome Extension",
+  "main": "index.html",
+  "scripts": {
+    "build": "rm -rf build && mkdir build && cp -R src/ build && cp -R bower_components/ build/vendor"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raisen/Random-Quotes.git"
+  },
+  "author": "Weydson Lima <thevegancoder@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/raisen/Random-Quotes/issues"
+  },
+  "homepage": "https://github.com/raisen/Random-Quotes#readme"
+}
