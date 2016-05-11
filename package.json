@@ -1,6 +1,6 @@
 {
   "name": "randomquotes",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "Random Quotes Chrome Extension",
   "main": "index.html",
   "scripts": {
